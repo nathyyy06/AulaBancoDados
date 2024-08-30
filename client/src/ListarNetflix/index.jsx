@@ -1,32 +1,32 @@
 import { useEffect, useState } from 'react';
 import '../globals.css';
 
-export default function ReadNetfix() {
-  const [netfix, setNetfix] = useState([]);
+export default function ReadNetflix() {
+  const [netflix, setNetflix] = useState([]);
 
 
   useEffect(() => {
-    const fetchNetfix = async () => {
+    const fetchNetflix = async () => {
       try {
-        const response = await fetch('http://localhost:5000/netfix');
+        const response = await fetch('http://localhost:5000/netflix');
         const data = await response.json();
-        setNetfix(data);
+        setNetflix(data);
       } catch (error) {
         console.error('Erro ao buscar as contas:', error);
       }
     };
 
-    fetchNetfix();
+    fetchNetflix();
   }, []);
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/netfix/${id}`, {
+      const response = await fetch(`http://localhost:5000/netflix/${id}`, {
         method: 'DELETE',
       });
       if (response.ok) {
 
-        setnetfix(netfix.filter((netfix) => netfix._id !== id));
+        setnetflix(netflix.filter((netflix) => netflix._id !== id));
         alert('Conta excluída com sucesso!');
       } else {
         alert('Erro ao excluir conta.');
@@ -50,14 +50,14 @@ export default function ReadNetfix() {
           </tr>
         </thead>
         <tbody>
-          {netfix.map((netfixa) => (
-            <tr key={netfix._id}>
-              <td>{netfix._id}</td>
-              <td>{netfix.nome}</td>
-              <td>{netfix.email}</td>
-              <td>{netfix.senha}</td>
+          {netflix.map((netflix) => (
+            <tr key={netflix._id}>
+              <td>{netflix._id}</td>
+              <td>{netflix.nome}</td>
+              <td>{netflix.email}</td>
+              <td>{netflix.senha}</td>
               <td>
-                <button onClick={() => handleDelete(netfix._id)}>Excluir conta</button>
+                <button onClick={() => handleDelete(netflix._id)}>Excluir conta</button>
               </td>
             </tr>
           ))}

@@ -48,8 +48,7 @@ export default function CreateNetflix() {
       />
       <input
         type="text"
-        placeholder="e
-        Email"
+        placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required

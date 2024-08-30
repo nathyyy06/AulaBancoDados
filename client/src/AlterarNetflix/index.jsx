@@ -14,7 +14,7 @@ export default function UpdateNetflix() {
     const atualizacao = { nome, email, senha};
 
     try {
-      const response = await fetch(`http://localhost:5000/netflex/${id}`, {
+      const response = await fetch(`http://localhost:5000/netflix/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ export default function UpdateNetflix() {
       <h2>Atualizar Conta</h2>
       <input
         type="text"
-        placeholder="ID da Conta"
+        placeholder="Codigo da Conta"
         value={id}
         onChange={(e) => setId(e.target.value)}
         required
