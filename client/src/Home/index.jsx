@@ -4,7 +4,7 @@ import '../globals.css';
 export default function Home() {
     return (
         <div className='container'>
-            <h2>Quem vai assistir</h2>
+            <h2>Cadastra-se para Maratonar</h2>
             <div className="card-container">
                 <Link to="/netflix/cadastrar" className="card">
                     <div>Cadastrar conta</div>

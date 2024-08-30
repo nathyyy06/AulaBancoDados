@@ -6,19 +6,15 @@ body{
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+    background-image: url(https://www.mundoconectado.com.br/wp-content/uploads/2022/06/netflix-1-1.jpg);
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
   h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: red;
   }
   
   .container {
@@ -28,7 +24,6 @@ body {
     justify-content: center;
     padding: 20px;
     min-height: 100vh;
-    background-color: #f7f7f7;
   }
   
   .form-container {
@@ -37,7 +32,7 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px beige;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -52,7 +47,7 @@ body {
   
   .form-container button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #ff0000;
     color: white;
     border: none;
     border-radius: 4px;
@@ -62,7 +57,7 @@ body {
   }
   
   .form-container button:hover {
-    background-color: #0056b3;
+    background-color: #ed0606;
   }
   
   .table-container {
@@ -71,7 +66,7 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px beige;
   }
   
   .table-container table {
@@ -110,7 +105,7 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(238, 234, 234, 0.656);
     width: 100%;
     max-width: 400px;
   }
@@ -141,6 +136,7 @@ body {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+
   }
   
   .card {
@@ -149,7 +145,7 @@ body {
     justify-content: center;
     width: 200px;
     height: 200px;
-    background-color: #409706b7;
+    background-color: #ec0808b7;
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -160,12 +156,57 @@ body {
   }
   
   .card:hover {
-    background-color: #0056b3;
+    background-color: #f84444;
   }
 
-  body{
- 
-    background-image: url(https://1.bp.blogspot.com/-GjKJGwrzoJc/YPgn-T_sUsI/AAAAAAAAasg/dlyt5q9lnyET10yhD9jcEdzZiuWGjZAjQCLcBGAsYHQ/s1170/netflix-servico-distribuicao-jogos-mobile.jpg);
+  nav.menu-lateral {
+    width: 300px;
+    height: 100%;
+    background-color: black;
+    padding: 40px 0 40px 1%;
+
+  }
+
+  .btn-expandir{
+    width: 100%;
+    padding: 10px;
+  }
+
+  .btn-expandir > i {
+  color: #ccc;
+  font-size: 24px;
+  cursor: pointer;
+  }
+
+  ul{
+    height: 100%;
+    list-style-type: none;
+
+  }
+  ul li.item-menu{
+    transition: 1.s;
+  }
+  ul li.item-menu:hover{
+   background: red;
+  }
+
+  ul li.item-menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 40x 4% ;
+    display: frex;
+    margin-bottom: 20px;
+    line-height: 40px;
+  }
+
+  ul li.item-menu a .txt-link{
+    margin-left: 30px;
+  }
+
+  ul li.item-menu a.icon > i{
+    font-size: 30px;
+
   }
 
   
