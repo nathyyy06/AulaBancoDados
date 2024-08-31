@@ -27,53 +27,53 @@ connectDB();
 app.use(express.json()); 
 
 
-app.post('/matriculas', async (req, res) => {
+app.post('/netflix', async (req, res) => {
   try {
-    const novaMatricula = req.body;
+    const novaNetflix = req.body;
 
     
-    const result = await collection.insertOne(novaMatricula);
+    const result = await collection.insertOne(novaNetflix);
     
-    res.status(201).json({ message: 'Matrícula criada com sucesso', matriculaId: result.insertedId });
+    res.status(201).json({ message: 'Conta criada com sucesso', netflixId: result.insertedId });
   } catch (err) {
-    res.status(500).json({ message: 'Erro ao criar matrícula', error: err });
+    res.status(500).json({ message: 'Erro ao criar conta', error: err });
   }
 });
 
-app.get('/matriculas', async (req, res) => {
+app.get('/natflix', async (req, res) => {
   try {
     
 
-    const matriculas = await collection.find().toArray();
+    const netflix = await collection.find().toArray();
 
-    res.status(200).json(matriculas);
+    res.status(200).json(netflix);
   } catch (err) {
-    res.status(500).json({ message: 'Erro ao buscar matrículas', error: err });
+    res.status(500).json({ message: 'Erro ao buscar contas', error: err });
   }
 });
 
 const { ObjectId } = require('mongodb');
 
-app.get('/matriculas/:id', async (req, res) => {
+app.get('/netflix/:id', async (req, res) => {
   try {
     const id = req.params.id;
     const newId =  new ObjectId(id);
 
     
 
-    const matricula = await collection.findOne({ _id: newId });
+    const netflix = await collection.findOne({ _id: newId });
 
-    if (!matricula) {
-      res.status(404).json({ message: 'Matrícula não encontrada' });
+    if (!netflix) {
+      res.status(404).json({ message: 'Conta não encontrada' });
     } else {
-      res.status(200).json(matricula);
+      res.status(200).json(netflix);
     }
   } catch (err) {
-    res.status(500).json({ message: 'Erro ao buscar matrícula', error: err });
+    res.status(500).json({ message: 'Erro ao buscar conta', error: err });
   }
 });
 
-app.put('/matriculas/:id', async (req, res) => {
+app.put('/netflix/:id', async (req, res) => {
   try {
     const id = req.params.id;
     const newId =  new ObjectId(id);
@@ -83,16 +83,16 @@ app.put('/matriculas/:id', async (req, res) => {
     const result = await collection.updateOne( { _id: newId }, { $set: atualizacao });
 
     if (result.matchedCount === 0) {
-      res.status(404).json({ message: 'Matrícula não encontrada' });
+      res.status(404).json({ message: 'Conta não encontrada' });
     } else {
-      res.status(200).json({ message: 'Matrícula atualizada com sucesso' });
+      res.status(200).json({ message: 'Conta atualizada com sucesso' });
     }
   } catch (err) {
-    res.status(500).json({ message: 'Erro ao atualizar matrícula', error: err });
+    res.status(500).json({ message: 'Erro ao atualizar Conta', error: err });
   }
 });
 
-app.delete('/matriculas/:id', async (req, res) => {
+app.delete('/netflix/:id', async (req, res) => {
   try {
     const id = req.params.id;
     const newId =  new ObjectId(id);
@@ -101,12 +101,12 @@ app.delete('/matriculas/:id', async (req, res) => {
     
 
     if (result.deletedCount === 0) {
-      res.status(404).json({ message: 'Matrícula não encontrada' });
+      res.status(404).json({ message: 'Conta não encontrada' });
     } else {
-      res.status(200).json({ message: 'Matrícula excluída com sucesso' });
+      res.status(200).json({ message: 'Conta excluída com sucesso' });
     }
   } catch (err) {
-    res.status(500).json({ message: 'Erro ao excluir matrícula', error: err });
+    res.status(500).json({ message: 'Erro ao excluir Conta', error: err });
   }
 });
 

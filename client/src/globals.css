@@ -159,54 +159,5 @@ body{
     background-color: #f84444;
   }
 
-  nav.menu-lateral {
-    width: 300px;
-    height: 100%;
-    background-color: black;
-    padding: 40px 0 40px 1%;
-
-  }
-
-  .btn-expandir{
-    width: 100%;
-    padding: 10px;
-  }
-
-  .btn-expandir > i {
-  color: #ccc;
-  font-size: 24px;
-  cursor: pointer;
-  }
-
-  ul{
-    height: 100%;
-    list-style-type: none;
-
-  }
-  ul li.item-menu{
-    transition: 1.s;
-  }
-  ul li.item-menu:hover{
-   background: red;
-  }
-
-  ul li.item-menu a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 40x 4% ;
-    display: frex;
-    margin-bottom: 20px;
-    line-height: 40px;
-  }
-
-  ul li.item-menu a .txt-link{
-    margin-left: 30px;
-  }
-
-  ul li.item-menu a.icon > i{
-    font-size: 30px;
-
-  }
-
+  
   

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../globals.css';
-
 export default function Home() {
+    
     return (
         <div className='container'>
             <h2>Cadastra-se para Maratonar</h2>
@@ -17,5 +17,10 @@ export default function Home() {
                 </Link>
             </div>
         </div>
+        
+       
+       
+        
     );
+    
 }
