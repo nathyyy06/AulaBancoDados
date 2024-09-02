@@ -40,7 +40,7 @@ app.post('/netflix', async (req, res) => {
   }
 });
 
-app.get('/natflix', async (req, res) => {
+app.get('/netflix', async (req, res) => {
   try {
     
 
