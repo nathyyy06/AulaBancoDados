@@ -163,106 +163,82 @@ body{
 
 
 
-  .container {
-    display: flex;
-}
 
-/* Estilo para o menu lateral */
+
+
+
 .sidebar {
-    width: 250px; /* Largura fixa do menu lateral */
-    background-color: #000000;
-    padding: 20px;
-    height: 100vh; /* Ocupa toda a altura da tela */
-    box-shadow: 2px 0 5px rgb(255, 0, 221);
-    position: fixed; /* Mantém o menu lateral fixo na tela */
-    top: 0;
-    left: -250px; /* Inicia fora da tela */
-    transition: left 0.3s ease; /* Anima a transição */
-    z-index: 1000; /* Garante que o menu lateral fique sobre outros elementos */
-}
-
-/* Quando o menu lateral está aberto */
-.sidebar.open {
-    left: 0; /* Move o menu para a tela */
-}
-
-/* Botão para abrir e fechar o menu lateral */
-.menu-toggle {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background-color: #014e50;
-    color: #ffffff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1001; /* Garante que o botão esteja sobre o menu */
-}
-
-/* Estilo para o conteúdo principal, que deve estar ao lado do menu lateral */
-.main-content {
-    margin-left: 250px; /* Adiciona margem para evitar sobreposição com o menu lateral */
-    padding: 20px;
-    flex: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
-}
-
-/* Estilos para os cards dentro do conteúdo principal */
-.card-container {
-    display: flex;
-    gap: 10px;
-}
-
-.card {
-    text-decoration: none;
-    padding: 10px;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    background-color: #ffffff;
-    transition: background-color 0.3s;
-}
-
-.card:hover {
-    background-color: #fffefe;
-}
-
-.sidebar i {
-  margin-right: 10px; /* Espaçamento entre o ícone e o texto */
-  color: #ffffff; /* Cor dos ícones */
-}
-
-.sidebar a {
-  text-decoration: none; /* Remove o sublinhado dos links */
-  color: inherit; /* Usa a cor herdada dos ícones */
+  width: 250px;
+  height: 100vh;
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  align-items: center; /* Alinha o ícone e o texto verticalmente */
+  flex-direction: column;
+  padding-top: 40px;
 }
 
-.sidebar a:hover i {
-  color: #fdfdfd; /* Altera a cor dos ícones ao passar o mouse */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+  background-color: #e91e63;
+  width: 50%;
+  height: 50px;
+  padding: 20px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li a .icon {
+  font-size: 20px;
+  width: 30px;
+}
+
+.sidebar ul li a .text {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.sidebar ul li.active, 
+.sidebar ul li:hover {
+  background-color: #e91e63;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #014e50;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1001; /* Garante que o botão esteja sobre o menu */
 }
 
 
-
-.nav-list a {
-  color: rgb(255, 255, 255); /* Mude para a cor desejada */
+.slick-slide img {
+  width: 100%;
+  height: auto;
 }
 
-.nav-list a:hover {
-  color: rgb(249, 0, 203); /* Mude para a cor desejada quando o link é sobreposto pelo mouse */
+.slick-dots {
+  bottom: 10px;
 }
-ul a {
-  color: rgb(255, 0, 234); /* Mude para a cor desejada */
-}
-
-ul a:hover {
-  color: rgb(255, 0, 221); /* Mude para a cor desejada quando o link é sobreposto pelo mouse */
-}
-
-.nav-list i {
-  font-size: 24px; /* Ajuste o valor conforme necessário */
-}
-
-
-
-
